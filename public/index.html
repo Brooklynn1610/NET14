@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devices API</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Smart Home Devices API</h1>
+    <p>This page reads devices from <code>/api/devices</code> and lets you add a new one.</p>
+
+    <form id="device-form">
+      <input name="name" placeholder="Device Name (e.g., Thermostat)" required>
+      <input name="room" placeholder="Room (e.g., Living Room)" required>
+      <input name="status" placeholder="Status (e.g., Active/Offline)" required>
+      <input name="battery" type="number" min="0" max="100" step="1" placeholder="Battery %" required>
+      <button type="submit">Add Device</button>
+    </form>
+
+    <p id="message"></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Room</th>
+          <th>Status</th>
+          <th>Battery %</th>
+        </tr>
+      </thead>
+      <tbody id="devices-body"></tbody>
+    </table>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
